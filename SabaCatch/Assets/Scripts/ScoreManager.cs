@@ -10,16 +10,22 @@ public class ScoreManager : SingletonMonoBehaviour<ScoreManager>
     [SerializeField] private int scoreWeight;
     private int gameScore;
 
+    [HideInInspector] public int scoreCount;
+    [HideInInspector] public int sabaCount;
+
     public void additionScore()
     {
         gameScore += scoreWeight;
         gameScoreText.text = setScoreText();
+        scoreCount = gameScore;
     }
     
     public void subtractionScore()
     {
-        gameScore -= scoreWeight;
+        gameScore -= (scoreWeight*5);
         gameScoreText.text = setScoreText();
+        scoreCount = gameScore;
+        sabaCount += 1;
     }
 
     private string setScoreText()

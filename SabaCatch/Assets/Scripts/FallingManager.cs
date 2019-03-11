@@ -17,7 +17,9 @@ namespace falling
 		private int minSpawnPos;
 		private int spawnPosSpan;
 
-		[SerializeField] private float spawnWaitTime;
+		[SerializeField] public float spawnWaitTime;
+
+		private bool isEnd;
 
 		private void Start()
 		{
@@ -34,12 +36,17 @@ namespace falling
 
 		private IEnumerator spawn()
 		{
-			while (true)
+			while (!isEnd)
 			{
 				yield return new WaitForSeconds(spawnWaitTime);
 				var spawnObject = Instantiate(fallingItems[Random.Range(minItemsIndex, maxItemsIndex)] , new Vector3(Random.Range(minSpawnPos,maxSpawnPos) * spawnPosSpan, 7 , 0) , Quaternion.identity);
 				Destroy(spawnObject,10);
 			}
+		}
+
+		public void stopSpawnObjects()
+		{
+			isEnd = true;
 		}
 
 	}
