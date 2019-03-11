@@ -11,7 +11,7 @@ public class TweetButton : MonoBehaviour
     
     public void OnClick()
     {
-        tweetText = "SABA_GAMEで" + ScoreManager.Instance.scoreCount + "点を獲得しました！\n 獲得した鯖は【"+ ScoreManager.Instance.sabaCount+"】匹！ ";
+        tweetText = "おちさば！で" + ScoreManager.Instance.scoreCount + "点を獲得しました！\n 獲得した鯖は【"+ ScoreManager.Instance.sabaCount+"】匹！ ";
         var url = "https://twitter.com/intent/tweet?"
                   + "text=" + tweetText
                   + "&hashtags=" + hashtag;
