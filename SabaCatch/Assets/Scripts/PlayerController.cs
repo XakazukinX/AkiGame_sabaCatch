@@ -60,12 +60,13 @@ public class PlayerController : MonoBehaviour
 
     private void playerMoving()
     {
+        PlayerManager.Instance.playerMoveCount =
+            Mathf.Clamp(PlayerManager.Instance.playerMoveCount, _minCount, _maxCount);
+        
+        
         gameObject.transform.position =
             new Vector3(PlayerManager.Instance.playerMoveCount * PlayerManager.Instance._moveDist, transform.position.y,
                 transform.position.z);
-        
-        PlayerManager.Instance.playerMoveCount =
-            Mathf.Clamp(PlayerManager.Instance.playerMoveCount, _minCount, _maxCount);
         
     }
 
@@ -81,12 +82,14 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(other.gameObject);
             changeSprite(FallingObjectType.ObjectType.SABA);
+            ScoreManager.Instance.subtractionScore();
             Debug.Log("SABA");
         }
         else if (_falling._fallingObjectType == FallingObjectType.ObjectType.NOTSABA)
         {
             Destroy(other.gameObject);
             changeSprite(FallingObjectType.ObjectType.NOTSABA);
+            ScoreManager.Instance.additionScore();
             Debug.Log("NOT_SABA");
         }
     }
