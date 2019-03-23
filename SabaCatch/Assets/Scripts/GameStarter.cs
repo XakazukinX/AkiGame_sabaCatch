@@ -14,5 +14,6 @@ public class GameStarter : MonoBehaviour
             GameManagers[i].SetActive(true);
         }
         playerObject.SetActive(true);
+        SoundManager.Instance.playSound(2);
     }
 }

@@ -84,6 +84,7 @@ public class PlayerController : MonoBehaviour
             changeSprite(FallingObjectType.ObjectType.SABA);
             ScoreManager.Instance.subtractionScore();
             Debug.Log("SABA");
+            SoundManager.Instance.playSound(1);
         }
         else if (_falling._fallingObjectType == FallingObjectType.ObjectType.NOTSABA)
         {
@@ -91,6 +92,7 @@ public class PlayerController : MonoBehaviour
             changeSprite(FallingObjectType.ObjectType.NOTSABA);
             ScoreManager.Instance.additionScore();
             Debug.Log("NOT_SABA");
+            SoundManager.Instance.playSound(0);
         }
     }
 

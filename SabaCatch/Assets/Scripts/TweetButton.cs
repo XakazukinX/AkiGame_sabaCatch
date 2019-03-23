@@ -11,16 +11,16 @@ public class TweetButton : MonoBehaviour
     
     public void OnClick()
     {
-        tweetText = "おちさば！で" + ScoreManager.Instance.scoreCount + "点を獲得しました！\n 獲得した鯖は【"+ ScoreManager.Instance.sabaCount+"】匹！ ";
+        tweetText = "おちさば!!で" + ScoreManager.Instance.scoreCount + "点を獲得しました！\n 獲得した鯖は【"+ ScoreManager.Instance.sabaCount+"】匹！ ";
         var url = "https://twitter.com/intent/tweet?"
                   + "text=" + tweetText
                   + "&hashtags=" + hashtag;
-
+        
+        
 #if UNITY_EDITOR
         Application.OpenURL ( url );
 #elif UNITY_WEBGL
-            // WebGLの場合は、ゲームプレイ画面と同じウィンドウでツイート画面が開かないよう、処理を変える
-            Application.ExternalEval(string.Format("window.open('{0}','_blank')", url));
+        naichilab.UnityRoomTweet.Tweet ("natsuakigame_ochisaba", tweetText, "夏秋ゲーム");
 #else
             Application.OpenURL(url);
 #endif
