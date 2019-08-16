@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
 
     private bool isWait;
 
+
     private void Start()
     {
         Debug.Log(_playerSprite.name);
@@ -26,9 +27,19 @@ public class PlayerController : MonoBehaviour
         Debug.Log(_minCount+" "+_maxCount);
     }
 
+    private void OnEnable()
+    {
+        MoveManager.OnGetMove += OnGetMove;
+    }
+
+    private void OnGetMove(int keyNumber)
+    {
+        playerMoving(keyNumber);
+    }
+    
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+/*        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             PlayerManager.Instance.playerMoveCount += 1;
             playerMoving();
@@ -38,7 +49,7 @@ public class PlayerController : MonoBehaviour
         {
             PlayerManager.Instance.playerMoveCount -= 1;
             playerMoving();
-        }
+        }*/
         
         
         //test
@@ -58,16 +69,16 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    private void playerMoving()
+    private void playerMoving(int keyNum)
     {
-        PlayerManager.Instance.playerMoveCount =
-            Mathf.Clamp(PlayerManager.Instance.playerMoveCount, _minCount, _maxCount);
-        
-        
+/*        PlayerManager.Instance.playerMoveCount =
+            Mathf.Clamp(PlayerManager.Instance.playerMoveCount, _minCount, _maxCount);*/
+
+
         gameObject.transform.position =
-            new Vector3(PlayerManager.Instance.playerMoveCount * PlayerManager.Instance._moveDist, transform.position.y,
+            new Vector3(-6 + (PlayerManager.Instance._moveDist * keyNum), transform.position.y,
                 transform.position.z);
-        
+
     }
 
 

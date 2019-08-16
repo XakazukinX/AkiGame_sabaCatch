@@ -20,9 +20,17 @@ namespace falling
 		[SerializeField] public float spawnWaitTime;
 
 		private bool isEnd;
+		
+		private int[] spawnXList = new int[7];
 
 		private void Start()
 		{
+			for (int i = 0; i < spawnXList.Length; i++)
+			{
+				spawnXList[i] = (-6 + (i * 2)); 
+				Debug.Log(spawnXList[i]);
+			}
+			
 			maxItemsIndex = fallingItems.Length;
 			minItemsIndex = 0;
 
@@ -39,7 +47,9 @@ namespace falling
 			while (!isEnd)
 			{
 				yield return new WaitForSeconds(spawnWaitTime);
-				var spawnObject = Instantiate(fallingItems[Random.Range(minItemsIndex, maxItemsIndex)] , new Vector3(Random.Range(minSpawnPos,maxSpawnPos) * spawnPosSpan, 7 , 0) , Quaternion.identity);
+				var spawnItem = fallingItems[Random.Range(minItemsIndex, maxItemsIndex)];
+				var spawnObject = Instantiate(spawnItem,
+					new Vector3(spawnXList[Random.Range(0, 7)], 7, 0), spawnItem.transform.rotation);
 				Destroy(spawnObject,10);
 			}
 		}

@@ -1,28 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\tente\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\tente\.Rider2018.2\system\resharper-host\Local\Transient\ReSharperHost\v182\SolutionCaches\_SabaCatch.-373640146.00" t="ExcludeRecursive" />
-    <e p="D:\Git\AkiGame_SabaCatch\SabaCatch" t="IncludeRecursive">
+    <e p="C:\Users\tente\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\tente\.Rider2019.1\system\resharper-host\Local\Transient\ReSharperHost\v191\SolutionCaches\_SabaCatch.-4956008.00" t="ExcludeRecursive" />
+    <e p="C:\Users\tente\ドキュメント\AkiGame_SabaCatch\SabaCatch" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="naichilab" t="Include">
+          <e p="unityroom-tweet" t="Include">
+            <e p="Sample" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="TweetSample.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="Internal" t="Include">
+                <e p="CoroutineHandler.cs" t="Include" />
+                <e p="GyazoResponse.cs" t="Include" />
+                <e p="GyazoSetting.cs" t="Include" />
+                <e p="GyazoUploader.cs" t="Include" />
+                <e p="ITweetData.cs" t="Include" />
+                <e p="TweetData.cs" t="Include" />
+              </e>
+              <e p="UnityRoomTweet.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Scripts" t="Include">
+          <e p="BackButton.cs" t="Include" />
+          <e p="CreditButton.cs" t="Include" />
           <e p="FallingManager.cs" t="Include" />
           <e p="FallingObject.cs" t="Include" />
           <e p="FallingObjectType.cs" t="Include" />
+          <e p="GameStarter.cs" t="Include" />
+          <e p="LifeManager.cs" t="Include" />
+          <e p="MissLoader.cs" t="Include" />
+          <e p="MisterLoader.cs" t="Include" />
+          <e p="MoveButtonManager.cs" t="Include" />
+          <e p="MoveManager.cs" t="Include" />
+          <e p="PageButton.cs" t="Include" />
+          <e p="Play" t="Include">
+            <e p="GameStateManager.cs" t="Include" />
+            <e p="itemData.cs" t="Include" />
+            <e p="ObjectSpawner.cs" t="Include" />
+            <e p="PlayerController.cs" t="Include" />
+            <e p="PlayManager.cs" t="Include" />
+            <e p="ResultController.cs" t="Include" />
+            <e p="ResultManager.cs" t="Include" />
+            <e p="ScoreDisp.cs" t="Include" />
+            <e p="ScoreManager.cs" t="Include" />
+            <e p="SoundConfig.cs" t="Include" />
+            <e p="SoundManager.cs" t="Include" />
+            <e p="Tail.cs" t="Include" />
+            <e p="VolumeSwitch.cs" t="Include" />
+          </e>
           <e p="PlayerController.cs" t="Include" />
           <e p="PlayerManager.cs" t="Include" />
           <e p="ScoreManager.cs" t="Include" />
+          <e p="SearchButton.cs" t="Include" />
           <e p="SingletonMonoBehaviour.cs" t="Include" />
+          <e p="SoundManager.cs" t="Include" />
+          <e p="Timer.cs" t="Include" />
+          <e p="TitleButton_GoCredit.cs" t="Include" />
+          <e p="TitleButton_GoGame.cs" t="Include" />
+          <e p="TweetButton.cs" t="Include" />
+          <e p="VoteManager.cs" t="Include" />
+          <e p="VoteUser.cs" t="Include" />
+        </e>
+        <e p="SU3DJPFont" t="Include">
+          <e p="Demo" t="Include">
+            <e p="SampleScene.cs" t="Include" />
+          </e>
+          <e p="Fonts" t="Include">
+            <e p="MPlusTestflight60" t="Include">
+              <e p="LICENSE_E.txt" t="Include" />
+              <e p="LICENSE_J.txt" t="Include" />
+              <e p="README_E.txt" t="Include" />
+              <e p="README_J.txt" t="Include" />
+            </e>
+          </e>
+          <e p="license.txt" t="Include" />
+          <e p="license_jp.txt" t="Include" />
+          <e p="list.txt" t="Include" />
+          <e p="readme.txt" t="Include" />
+          <e p="readme_jp.txt" t="Include" />
+        </e>
+        <e p="TweeWithScreenShot" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="CustomTweetManager.cs" t="Include" />
+            <e p="Demo.cs" t="Include" />
+            <e p="SingletonMonoBehaviourFast.cs" t="Include" />
+            <e p="TweetManager.cs" t="Include" />
+          </e>
         </e>
       </e>
-      <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="SabaCatch.sln" t="IncludeFlat" />
-      <e p="Temp" t="ExcludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-      </e>
+      <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
   </component>
 </project>
